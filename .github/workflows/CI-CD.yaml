@@ -25,15 +25,15 @@ jobs:
         run: dotnet build --configuration Release
 
       
-       - name: publish app
-         run: dotnet publish --configuration Release -o ./out
+      #  - name: publish app
+      #    run: dotnet publish --configuration Release -o ./out
 
 
-      - name: Deploy to Azure
-        uses: azure/webapps-deploy@v2
-        with:
-           app-name: 'test999999'
-           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A57F1E913B7A431381732EA414C76C43 }}
-           package: ./out
+      # - name: Deploy to Azure
+      #   uses: azure/webapps-deploy@v2
+      #   with:
+      #      app-name: 'test999999'
+      #      publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A57F1E913B7A431381732EA414C76C43 }}
+      #      package: ./out
       
       #publish the app to Azure
