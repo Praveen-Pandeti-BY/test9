@@ -20,6 +20,7 @@ jobs:
           dotnet-version: '5.0.x'
           include-prerelease: true
 
+#build the code, you done need action here. we have setup the dotnet in the above step so we can just use the run: command
       - name: Build the app with dotnet
         run: dotnet build --configuration Release
 
